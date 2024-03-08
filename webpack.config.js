@@ -1,13 +1,18 @@
-import { resolve } from 'path';
-import HTMLWebpackPlugin from 'html-webpack-plugin';
+const path = require('path');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
 
-export const entry = './src/index.js';
-export const output = {
-    filename: 'main.js',
-    path: resolve(__dirname, 'dist'),
+module.exports = {
+	entry: './src/index.js',
+	output: {
+		filename: 'main.js',
+		path: path.resolve(__dirname, 'dist'),
+	},
 	plugins: [
 		new HTMLWebpackPlugin({
-			template: "src/index.html",
+			template: "./src/index.html",
+			filename: "index.html",
+			inject: "head",
+			scriptLoading: "defer",
 		}),
 	],
 };
