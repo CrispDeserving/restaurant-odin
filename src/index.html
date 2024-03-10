@@ -7,10 +7,28 @@
 	<title>Restaurant Odin</title>
 </head>
 
-<body>
-	<header>
+<body style="
+	padding: 0;
+	margin: 0;
+	width: 100vw;
+	height: 100vh;
+">
+	<header style="
+		display: flex;
+		align-items: center;
+		gap: 2rem;
+		padding: 0 1rem;
+		background-color: lightyellow;
+	">
+		<h1>Restaurant Odin</h1>
 		<nav>
-			<ul>
+			<ul style="
+				display: flex;
+				gap: 1rem;
+				list-style-type: none;
+				margin: 0;
+				padding: 1rem 0;
+			">
 				<li><button>Home</button></li>
 				<li><button>Menu</button></li>
 				<li><button>About</button></li>
@@ -18,7 +36,30 @@
 		</nav>
 	</header>
 
-	<div id="content"></div>
+	<div id="content" style="
+		padding: 1rem 0;
+	">
+		<div class="hook" style="
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 3rem;
+		">
+			<img src="../src/assets/restaurant.jpg" alt="An image of an italian restaurant" style="
+				aspect-ratio: 16 / 9;
+				width: 30vw;
+			" />
+
+			<div class="content" style="
+				width: 30vw;
+			">
+				<h1>Restaurant Odin</h1>
+
+				<p>Has the finest cuisine on the land. Farm fresh ingredients, good quality service, hospitable crew. Overall, a
+					good time.</p>
+			</div>
+		</div>
+	</div>
 </body>
 
 </html>
