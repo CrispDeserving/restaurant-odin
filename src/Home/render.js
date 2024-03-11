@@ -22,7 +22,7 @@
 // </div>
 //
 
-import { children } from "./dsl-utils.js";
+import { children } from "../dsl-utils.js";
 
 function init_home_element() {
 	const Home =

@@ -1,4 +1,4 @@
-import { Home } from "./home-render";
+import { Home } from "./Home/render.js";
 
 function handle_home_click() {
 	document.querySelector('#content').appendChild(Home);
