@@ -23,6 +23,7 @@
 //
 
 import { children } from "../dsl-utils.js";
+import "./style.css";
 
 function init_home_element() {
 	const Home =
@@ -37,6 +38,11 @@ function init_home_element() {
 
 	Home.setAttribute('id', 'home');
 	Home.querySelector('div').classList.add('content');
+	{
+		const temp = Home.querySelector('img');
+		temp.classList.add('restaurant-image');
+		temp.setAttribute('alt', "An image of an italian restaurant");
+	}
 	Home.querySelector('div h1').innerText = "Restaurant Odin";
 	Home.querySelector('div p').innerText = "Has the finest cuisine on the land. Farm fresh ingredients, good quality service, hospitable crew. Overall, a good time.";
 
