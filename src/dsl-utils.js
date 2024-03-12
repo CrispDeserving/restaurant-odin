@@ -7,6 +7,14 @@ export function children(root, ...children) {
 	}, root);
 }
 
+export function replace_node(dummy_element, replacement_element) {
+	const parent = dummy_element.parentNode;
+
+	parent.insertBefore(replacement_element, dummy_element);
+	parent.removeChild(dummy_element);
+}
+
 export default {
 	children,
+	replace_node,
 };
