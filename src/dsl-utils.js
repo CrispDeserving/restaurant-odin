@@ -1,10 +1,15 @@
 export function children(root, ...children) {
 	if (children.length === 0 || children == null) return root;
 
-	return children.reduce((acc, el) => {
+	return children.flat().reduce((acc, el) => {
 		acc.appendChild(el);
 		return acc;
 	}, root);
+}
+
+export function replace_inside(root, replacement_element) {
+	root.innerHTML = "";
+	root.appendChild(replacement_element);
 }
 
 export function replace_node(dummy_element, replacement_element) {
