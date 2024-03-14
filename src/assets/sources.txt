@@ -1,3 +1,17 @@
-restaurant.jpg:
-	Pixabay: Brick Wall
-	https://pixabay.com/photos/brick-wall-chairs-furniture-1834784/
+Main:
+	restaurant.jpg:
+		Pixabay: Brick Wall
+		https://pixabay.com/photos/brick-wall-chairs-furniture-1834784/
+
+Menu:
+	tiramisu.jpg:
+		Pixabay: Italian Food Tiramisu
+		https://pixabay.com/photos/italian-food-tiramisu-italian-food-2157246/
+	
+	lobster.jpg:
+		Pixabay: Lobster Dinner
+		https://pixabay.com/photos/food-lobster-lobster-dinner-91944/
+
+	lasagna.jpg:
+		Pixabay: Food Lasagna Pasta
+		https://pixabay.com/photos/food-lasagna-pasta-dish-cuisine-5987888/
