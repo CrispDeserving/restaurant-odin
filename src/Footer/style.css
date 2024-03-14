@@ -1,0 +1,26 @@
+.Footer {
+	min-height: 5rem;
+	display: flex;
+	gap: 1rem;
+	padding: 0.5rem;
+	align-items: center;
+	background-color: lightblue;
+}
+
+.Footer div {
+	padding: 0 3rem;
+}
+
+.Footer ul {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	list-style-type: none;
+}
+
+.Footer .Detail div {
+	display: grid;
+	place-content: center;
+	text-align: center;
+}
