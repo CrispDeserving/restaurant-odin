@@ -20,3 +20,7 @@ Footer:
 	{map-pin, phone, twitter}.svg
 		FeatherIcons
 		https://feathericons.com/
+
+theme-colors.css
+	TailwindCSS: Customizing Colors
+	https://tailwindcss.com/docs/customizing-colors
