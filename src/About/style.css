@@ -35,10 +35,9 @@
 	text-align: left;
 }
 
-.About replace-me {
-	width: 5rem;
+.About img {
+	width: 4rem;
 	aspect-ratio: 1;
-	background: lightsalmon;
 }
 
 .About .Detail:nth-child(2n) {
