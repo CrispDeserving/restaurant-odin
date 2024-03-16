@@ -8,7 +8,8 @@
 	background-color: lightblue;
 }
 
-.Footer div {
+.Footer>div,
+.Footer .Detail {
 	padding: 0 3rem;
 }
 
@@ -20,8 +21,20 @@
 	list-style-type: none;
 }
 
-.Footer .Detail div {
+.Footer .Detail {
 	display: grid;
 	place-content: center;
 	text-align: center;
+}
+
+.Footer .Detail div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1ch;
+}
+
+.Footer .Detail img {
+	width: 1rem;
+	aspect-ratio: 1;
 }
