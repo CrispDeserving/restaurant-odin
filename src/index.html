@@ -15,6 +15,13 @@
 		body {
 			overflow-x: hidden;
 		}
+
+		.nav-btn {
+			border-radius: 0%;
+			background-color: lightgray;
+			border: 2px solid #ccc;
+			padding: 0.5ch 1rem;
+		}
 	</style>
 </head>
 
@@ -26,6 +33,7 @@
 ">
 	<header style="
 		display: flex;
+		justify-content: space-between;
 		align-items: center;
 		gap: 2rem;
 		padding: 0.5rem 1rem;
@@ -40,9 +48,9 @@
 				margin: 0;
 				padding: 1rem 0;
 			">
-				<li><button id="home_btn">Home</button></li>
-				<li><button id="menu_btn">Menu</button></li>
-				<li><button id="about_btn">About</button></li>
+				<li><button class="nav-btn" id="home_btn">Home</button></li>
+				<li><button class="nav-btn" id="menu_btn">Menu</button></li>
+				<li><button class="nav-btn" id="about_btn">About</button></li>
 			</ul>
 		</nav>
 	</header>
