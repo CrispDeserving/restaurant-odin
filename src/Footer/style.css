@@ -1,5 +1,6 @@
 .Footer {
 	min-height: 5rem;
+	min-width: 150ch;
 	display: flex;
 	gap: 1rem;
 	padding: 0.5rem;

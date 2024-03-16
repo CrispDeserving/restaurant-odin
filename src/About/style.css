@@ -48,6 +48,7 @@
 
 .AboutFooter {
 	min-height: 5rem;
+	min-width: 100ch;
 	display: flex;
 	justify-content: space-evenly;
 	gap: 5rem;
