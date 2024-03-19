@@ -2,6 +2,8 @@ import { children, replace_node } from "../dsl-utils";
 import MapPin from '../assets/map-pin.svg';
 import Phone from '../assets/phone.svg';
 import Twitter from '../assets/twitter.svg';
+import Award from '../assets/award.svg';
+import ImageIcon from '../assets/image.svg';
 import './style.css';
 
 function init_about_element() {
@@ -14,6 +16,8 @@ function init_about_element() {
 				"Twitter",
 				"Contact Number",
 				"Location",
+				"Images credited to",
+				"Icons credited to",
 			].map((detail_name,	i) => {
 				const Detail = children(document.createElement('li'),
 					document.createElement(dummy_image_element),
@@ -69,6 +73,28 @@ function init_about_element() {
 		const image = new Image();
 		image.setAttribute('src', MapPin);
 		image.setAttribute('alt', "An icon signifying a pinned location in a map.");
+
+		const dummy_element = temp.querySelector(`${dummy_image_element}`);
+		replace_node(dummy_element, image);
+	}
+	{
+		const temp = About.querySelector(`.Detail[data-index="3"]`);
+		temp.querySelector('.Details').innerText = "Pixabay (https://pixabay.com/)";
+		
+		const image = new Image();
+		image.setAttribute('src', ImageIcon);
+		image.setAttribute('alt', "An icon signifying an image.");
+
+		const dummy_element = temp.querySelector(`${dummy_image_element}`);
+		replace_node(dummy_element, image);
+	}
+	{
+		const temp = About.querySelector(`.Detail[data-index="4"]`);
+		temp.querySelector('.Details').innerText = "FeatherIcons (https://feathericons.com/)";
+		
+		const image = new Image();
+		image.setAttribute('src', Award);
+		image.setAttribute('alt', "An icon signifying a medal.");
 
 		const dummy_element = temp.querySelector(`${dummy_image_element}`);
 		replace_node(dummy_element, image);
