@@ -3,7 +3,7 @@ import { Menu } from "./Menu/render.js";
 import { Footer } from "./Footer/render.js";
 import { About, AboutFooter } from "./About/render.js";
 import { replace_inside } from "./dsl-utils.js"; 
-import "./assets/theme-colors.css";
+import "./assets/theme.css";
 
 const Content = document.querySelector('#content');
 
