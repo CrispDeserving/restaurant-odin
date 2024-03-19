@@ -6,9 +6,9 @@ import Award from '../assets/award.svg';
 import ImageIcon from '../assets/image.svg';
 import './style.css';
 
-function init_about_element() {
+function init_contact_element() {
 	const dummy_image_element = "replace-me";
-	const About = children(document.createElement('div'),
+	const Contact = children(document.createElement('div'),
 		document.createElement('h2'),
 
 		children(document.createElement('ul'),
@@ -41,11 +41,11 @@ function init_about_element() {
 		),
 	);
 
-	About.classList.add('About');
-	About.querySelector('h2').innerText = "Restaurant Odin";
+	Contact.classList.add('Contact');
+	Contact.querySelector('h2').innerText = "Restaurant Odin";
 	
 	{
-		const temp = About.querySelector(`.Detail[data-index="0"]`);
+		const temp = Contact.querySelector(`.Detail[data-index="0"]`);
 		temp.querySelector('.Details').innerText = "@resto-odin-unofficial";
 
 		const image = new Image();
@@ -56,7 +56,7 @@ function init_about_element() {
 		replace_node(dummy_element, image);
 	}
 	{
-		const temp = About.querySelector(`.Detail[data-index="1"]`);
+		const temp = Contact.querySelector(`.Detail[data-index="1"]`);
 		temp.querySelector('.Details').innerText = "(+00)973 786 6346 (09-RESTO-ODIN)";
 
 		const image = new Image();
@@ -67,7 +67,7 @@ function init_about_element() {
 		replace_node(dummy_element, image);
 	}
 	{
-		const temp = About.querySelector(`.Detail[data-index="2"]`);
+		const temp = Contact.querySelector(`.Detail[data-index="2"]`);
 		temp.querySelector('.Details').innerText = "Olympus, Land of the Demigods";
 		
 		const image = new Image();
@@ -78,7 +78,7 @@ function init_about_element() {
 		replace_node(dummy_element, image);
 	}
 	{
-		const temp = About.querySelector(`.Detail[data-index="3"]`);
+		const temp = Contact.querySelector(`.Detail[data-index="3"]`);
 		temp.querySelector('.Details').innerText = "Pixabay (https://pixabay.com/)";
 		
 		const image = new Image();
@@ -89,7 +89,7 @@ function init_about_element() {
 		replace_node(dummy_element, image);
 	}
 	{
-		const temp = About.querySelector(`.Detail[data-index="4"]`);
+		const temp = Contact.querySelector(`.Detail[data-index="4"]`);
 		temp.querySelector('.Details').innerText = "FeatherIcons (https://feathericons.com/)";
 		
 		const image = new Image();
@@ -100,29 +100,29 @@ function init_about_element() {
 		replace_node(dummy_element, image);
 	}
 
-	return About;
+	return Contact;
 }
 
-function init_about_footer_element() {
-	const AboutFooter = children(document.createElement('footer'),
+function init_contact_footer_element() {
+	const ContactFooter = children(document.createElement('footer'),
 		document.createElement('h2'),
 		document.createElement('p'),
 		document.createElement('p'),
 	);
-	AboutFooter.classList.add('AboutFooter');
+	ContactFooter.classList.add('ContactFooter');
 
-	AboutFooter.querySelector('h2').innerText = "Restaurant Odin";
-	AboutFooter.querySelector(':nth-child(1 of p)').innerText = "We're not Hiring...";
-	AboutFooter.querySelector(':nth-child(2 of p)').innerText = "But come join us!";
+	ContactFooter.querySelector('h2').innerText = "Restaurant Odin";
+	ContactFooter.querySelector(':nth-child(1 of p)').innerText = "We're not Hiring...";
+	ContactFooter.querySelector(':nth-child(2 of p)').innerText = "But come join us!";
 
-	return AboutFooter;
+	return ContactFooter;
 }
 
 
-export const About = init_about_element();
-export const AboutFooter = init_about_footer_element();
+export const Contact = init_contact_element();
+export const ContactFooter = init_contact_footer_element();
 
 export default {
-	About,
-	AboutFooter,
+	Contact,
+	ContactFooter,
 };
