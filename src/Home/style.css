@@ -1,12 +1,21 @@
 #home {
+	--home-content-gap: 0.5rem;
+	--content-to-image-gap: calc(var(--home-content-gap) * 4);
+
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	gap: 3rem;
+	gap: var(--content-to-image-gap);
 }
 
-.content {
+#home .content {
 	width: 30vw;
+	display: grid;
+	gap: var(--home-content-gap);
+}
+
+#home .content h1 {
+	font-size: var(--heading-font-size);
 }
 
 .restaurant-image {
