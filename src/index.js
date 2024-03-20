@@ -7,9 +7,19 @@ import "./assets/theme.css";
 
 const Content = document.querySelector('#content');
 
+
 function bind_dom_elements({ home_btn, menu_btn, contact_btn, dummy_footer }) {
+    const clear_all_selected = () => {
+	for (const btn of [home_btn, menu_btn, contact_btn]) {
+	    btn.classList.remove('selected');
+	}
+    }
+
     home_btn.addEventListener("click", () => {
 	replace_inside(Content, Home);
+
+	clear_all_selected();
+	home_btn.classList.add('selected');
 
 	if (dummy_footer.querySelector('.Footer') === null) {
 	    replace_inside(dummy_footer, Footer);
@@ -19,6 +29,9 @@ function bind_dom_elements({ home_btn, menu_btn, contact_btn, dummy_footer }) {
     menu_btn.addEventListener("click", () => {
 	replace_inside(Content, Menu);
 
+	clear_all_selected();
+	menu_btn.classList.add('selected');
+
 	if (dummy_footer.querySelector('.Footer') === null) {
 	    replace_inside(dummy_footer, Footer);
 	}
@@ -27,11 +40,16 @@ function bind_dom_elements({ home_btn, menu_btn, contact_btn, dummy_footer }) {
     contact_btn.addEventListener("click", () => {
 	replace_inside(Content, Contact);
 
+	clear_all_selected();
+	contact_btn.classList.add('selected');
+
 	if (dummy_footer.querySelector('.Footer') !== null) {
 	    replace_inside(dummy_footer, ContactFooter);
 	}
     });
 
+    Content.appendChild(Home);
+    home_btn.classList.add('selected');
     replace_inside(dummy_footer, Footer);
 }
 
@@ -44,5 +62,4 @@ window.addEventListener('DOMContentLoaded', () => {
 	contact_btn: document.querySelector('#contact_btn'),
 	dummy_footer: document.querySelector('#dummy_footer'),
     });
-    Content.appendChild(Home);
 });
