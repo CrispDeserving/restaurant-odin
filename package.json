@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx webpack build",
-    "watch": "npx webpack --watch",
-    "start": "npx webpack serve --open"
+    "build": "npx webpack build --config webpack.production.js",
+    "watch": "npx webpack --watch --config webpack.development.js",
+    "start": "npx webpack serve --open --config webpack.development.js"
   },
   "keywords": [
     "web-application"
@@ -21,5 +21,8 @@
     "webpack": "^5.90.3",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.0.2"
+  },
+  "dependencies": {
+    "webpack-merge": "^5.10.0"
   }
 }
