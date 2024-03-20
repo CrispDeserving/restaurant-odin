@@ -41,8 +41,9 @@ function init_contact_element() {
 		),
 	);
 
-	Contact.classList.add('Contact');
+	Contact.classList.add('ContactWrapper');
 	Contact.querySelector('h2').innerText = "Restaurant Odin";
+	Contact.querySelector('ul').classList.add('Contact');
 	
 	{
 		const temp = Contact.querySelector(`.Detail[data-index="0"]`);

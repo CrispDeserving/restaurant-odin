@@ -1,42 +1,39 @@
+.ContactWrapper {
+	--content-to-icon-gap: 1.5rem;
+	--content-gap: calc(var(--content-to-icon-gap) * 4);
+	--content-header-gap: calc(var(--content-gap) * 2);
+	--content-wrapper-gap: calc(var(--content-header-gap));
+	--icon-width: 4rem;
+
+	display: grid;
+	gap: var(--content-header-gap);
+	place-content: stretch center;
+	padding: var(--content-wrapper-gap) 0;
+}
+
+.ContactWrapper h2 {
+	font-size: 3rem;
+	justify-self: center;
+}
+
 .Contact {
-	display: flex;
-	flex-flow: column;
-	gap: 1rem;
-	padding: 0.5rem;
-	align-items: center;
-	width: 100%;
-}
-
-.Contact>div {
-	padding: 0 3rem;
-}
-
-.Contact>ul {
-	width: 40vw;
-}
-
-.Contact h2 {
-	font-size: 2rem;
-	padding: 3rem 0;
-}
-
-.Contact ul {
-	flex: 1;
+	width: min(100ch, 60vw);
 	display: flex;
 	flex-flow: column;
 	justify-content: space-evenly;
+	gap: var(--content-gap);
 	list-style-type: none;
 }
 
-.Contact .Detail {
+.ContactWrapper .Detail {
 	display: flex;
 	align-items: center;
-	gap: 1rem;
+	gap: var(--content-to-icon-gap);
 	text-align: left;
 }
 
 .Contact img {
-	width: 4rem;
+	width: var(--icon-width);
 	aspect-ratio: 1;
 }
 
@@ -54,7 +51,8 @@
 	background: lightblue;
 }
 
-.ContactFooter>* {
+.ContactFooter h2,
+.ContactFooter p {
 	display: grid;
 	place-content: center;
 }
